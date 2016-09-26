@@ -48,3 +48,7 @@ article p{
     margin-left: 10px;
     line-height: 18px;
 }
+
+article p sup{
+	vertical-align: super;
+}
