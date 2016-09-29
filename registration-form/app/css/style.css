@@ -11,59 +11,68 @@
   border-radius: 2px;
   padding: 3%;
   margin-bottom: 1.7%; }
-  .wrapper-input-area .gap {
-    padding-bottom: 7.9%; }
-  .wrapper-input-area .captcha label {
-    width: 12em; }
-  .wrapper-input-area .captcha img {
-    width: 6.5em;
-    padding-top: 4.4%;
-    vertical-align: bottom; }
-  .wrapper-input-area .captcha .status {
-    padding-bottom: 0.8em;
-    padding-left: 0.45em; }
-  .wrapper-input-area .captcha input {
+
+.gap {
+  padding-bottom: 7.9%; }
+
+.captcha label {
+  width: 12em; }
+
+.captcha img {
+  width: 6.5em;
+  padding-top: 4.4%;
+  vertical-align: bottom; }
+
+.captcha .status {
+  padding-bottom: 0.8em;
+  padding-left: 0.45em; }
+
+.captcha input {
+  position: relative;
+  width: 44%;
+  height: 5%;
+  margin-bottom: 1%; }
+  .captcha input ~ .status:after {
+    position: absolute;
+    content: ''; }
+
+.captcha input:focus ~ .status::after,
+.captcha input:focus:valid ~ .status::after,
+.captcha input:focus:invalid ~ .status::after {
+  content: ''; }
+
+.captcha input:valid ~ .status::after {
+  content: '✓';
+  color: #4E9B5A; }
+
+.captcha input:invalid ~ .status::after {
+  content: '×';
+  color: #B11117; }
+
+.wrapper-input {
+  margin-bottom: 2.2%; }
+  .wrapper-input label {
+    width: 6.5em; }
+  .wrapper-input input {
     position: relative;
     width: 44%;
-    height: 5%;
-    margin-bottom: 1%; }
-    .wrapper-input-area .captcha input ~ .status:after {
+    height: 5%; }
+    .wrapper-input input ~ .status:after {
       position: absolute;
       content: ''; }
-  .wrapper-input-area .captcha input:focus ~ .status::after,
-  .wrapper-input-area .captcha input:focus:valid ~ .status::after,
-  .wrapper-input-area .captcha input:focus:invalid ~ .status::after {
+  .wrapper-input input:focus ~ .status::after,
+  .wrapper-input input:focus:valid ~ .status::after,
+  .wrapper-input input:focus:invalid ~ .status::after {
     content: ''; }
-  .wrapper-input-area .captcha input:valid ~ .status::after {
+  .wrapper-input input:valid ~ .status::after {
     content: '✓';
     color: #4E9B5A; }
-  .wrapper-input-area .captcha input:invalid ~ .status::after {
+  .wrapper-input input:invalid ~ .status::after {
     content: '×';
     color: #B11117; }
-  .wrapper-input-area .wrapper-input {
-    margin-bottom: 2.2%; }
-    .wrapper-input-area .wrapper-input label {
-      width: 6.5em; }
-    .wrapper-input-area .wrapper-input input {
-      position: relative;
-      width: 44%;
-      height: 5%; }
-      .wrapper-input-area .wrapper-input input ~ .status:after {
-        position: absolute;
-        content: ''; }
-    .wrapper-input-area .wrapper-input input:focus ~ .status::after,
-    .wrapper-input-area .wrapper-input input:focus:valid ~ .status::after,
-    .wrapper-input-area .wrapper-input input:focus:invalid ~ .status::after {
-      content: ''; }
-    .wrapper-input-area .wrapper-input input:valid ~ .status::after {
-      content: '✓';
-      color: #4E9B5A; }
-    .wrapper-input-area .wrapper-input input:invalid ~ .status::after {
-      content: '×';
-      color: #B11117; }
-    .wrapper-input-area .wrapper-input .status {
-      padding-bottom: 0.8em;
-      padding-left: 0.45em; }
+  .wrapper-input .status {
+    padding-bottom: 0.8em;
+    padding-left: 0.45em; }
 
 .box-btn {
   background-color: #e3e3e3;
