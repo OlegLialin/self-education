@@ -1,0 +1,95 @@
+@charset "UTF-8";
+.wrapper {
+  background-color: #ffffff;
+  margin: 1% auto;
+  width: 75%;
+  font-size: 0.9em;
+  font-weight: bold; }
+
+.wrapper-input-area {
+  border: 1px solid #d4dadb;
+  border-radius: 2px;
+  padding: 3%;
+  margin-bottom: 1.7%; }
+  .wrapper-input-area .gap {
+    padding-bottom: 7.9%; }
+  .wrapper-input-area .captcha label {
+    width: 12em; }
+  .wrapper-input-area .captcha img {
+    width: 6.5em;
+    padding-top: 4.4%;
+    vertical-align: bottom; }
+  .wrapper-input-area .captcha .status {
+    padding-bottom: 0.8em;
+    padding-left: 0.45em; }
+  .wrapper-input-area .captcha input {
+    position: relative;
+    width: 44%;
+    height: 5%;
+    margin-bottom: 1%; }
+    .wrapper-input-area .captcha input ~ .status:after {
+      position: absolute;
+      content: ''; }
+  .wrapper-input-area .captcha input:focus ~ .status::after,
+  .wrapper-input-area .captcha input:focus:valid ~ .status::after,
+  .wrapper-input-area .captcha input:focus:invalid ~ .status::after {
+    content: ''; }
+  .wrapper-input-area .captcha input:valid ~ .status::after {
+    content: '✓';
+    color: #4E9B5A; }
+  .wrapper-input-area .captcha input:invalid ~ .status::after {
+    content: '×';
+    color: #B11117; }
+  .wrapper-input-area .wrapper-input {
+    margin-bottom: 2.2%; }
+    .wrapper-input-area .wrapper-input label {
+      width: 6.5em; }
+    .wrapper-input-area .wrapper-input input {
+      position: relative;
+      width: 44%;
+      height: 5%; }
+      .wrapper-input-area .wrapper-input input ~ .status:after {
+        position: absolute;
+        content: ''; }
+    .wrapper-input-area .wrapper-input input:focus ~ .status::after,
+    .wrapper-input-area .wrapper-input input:focus:valid ~ .status::after,
+    .wrapper-input-area .wrapper-input input:focus:invalid ~ .status::after {
+      content: ''; }
+    .wrapper-input-area .wrapper-input input:valid ~ .status::after {
+      content: '✓';
+      color: #4E9B5A; }
+    .wrapper-input-area .wrapper-input input:invalid ~ .status::after {
+      content: '×';
+      color: #B11117; }
+    .wrapper-input-area .wrapper-input .status {
+      padding-bottom: 0.8em;
+      padding-left: 0.45em; }
+
+.box-btn {
+  background-color: #e3e3e3;
+  border-radius: 4px;
+  padding: 1% 0 1% 12%; }
+  .box-btn .wrapper-btn button {
+    border: none;
+    border-top: 2px solid #008f00;
+    font-size: 11px;
+    color: #ffffff;
+    border-radius: 25px;
+    width: 153px;
+    height: 20px;
+    background: linear-gradient(to right, #008f00 0%, #00e400 15%, #00e400 85%, #008f00 100%);
+    position: relative;
+    z-index: 1; }
+  .box-btn .wrapper-btn button:after {
+    position: absolute;
+    content: '';
+    width: 149px;
+    height: 9px;
+    background: linear-gradient(to bottom, #2ab42a 0%, rgba(65, 198, 65, 0.1) 100%);
+    border-radius: 25px;
+    top: 0px;
+    left: 2px;
+    z-index: -1; }
+
+input, span, label, img {
+  display: inline-block; }
