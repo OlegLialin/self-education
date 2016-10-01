@@ -4,52 +4,68 @@
 
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Form</title>
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/style.css">
-	<script src="js/capcha.js"></script>
+
 </head>
 
 
 <body>
 <div class="wrapper">
-		<form action="#">
+		<form action="#" name="review"  METHOD="POST" onsubmit="return checkform(this);">
 			<div class="wrapper-input-area">
+
 				<div class="wrapper-input">
 				<label for="user_name">Имя</label>
-					<input id="user_name" type="text"  title="Введите имя" name="user_name" pattern="^[A-Za-zА-Яа-яЁё]+$">
+					<input id="user_name" type="text"  title="Введите имя" name="user_name" pattern="^[A-Za-zА-Яа-яЁё]+$"  required>
 					<span class="status"></span>
+					<span class="information">Без спец символов и пробелов</span>
+
 				</div>
 				<div class="wrapper-input">
 					<label for="user_surname">Фамилия</label>
-					<input id="user_surname" type="text" title="Введите фамилию" name="user_surname" pattern="^[A-Za-zА-Яа-яЁё]+$">
+					<input id="user_surname" type="text" title="Введите фамилию" name="user_surname" pattern="^[A-Za-zА-Яа-яЁё]+$" required>
 					<span class="status"></span>
+					<span class="information">Без спец символов и пробелов</span>
 				</div>
 				<div class="wrapper-input gap">
 					<label for="user_town">Город</label>
-					<input id="user_town" type="text" title="Введите город" name="user_town" pattern="^[A-Za-zА-Яа-яЁё]+$">
+					<input id="user_town" type="text" title="Введите город" name="user_town" pattern="^[A-Za-zА-Яа-яЁё]+$" required>
 					<span class="status"></span>
+					<span class="information">Без спец символов и пробелов</span>
 				</div>
 				<div class="wrapper-input">
 					<label for="user_email">Эл.почта</label>
-					<input id="user_email" type="email" title="Введите email. Только латиница" name="user_email" pattern="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,6}">
+					<input id="user_email" type="email" title="Введите email. Только латиница" name="user_email" pattern="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,6}" required>
 					<span class="status"></span>
+					<span class="information">Только латинские буквы. Email сождержит символ "@"</span>
 				</div>
 				<div class="wrapper-input">
 					<label for="user_password">Пароль</label>
-					<input id="user_password" type="password"  title="От 8 до 15 символов с минимум одной цифрой, одной  заглавной и одной строчной буквой. Только латиница" name="user_password" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,15}">
+					<input id="user_password" type="password"  title="От 8 до 15 символов с минимум одной цифрой, одной  заглавной и одной строчной буквой. Только латиница" name="user_password" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,15}" required>
 					<span class="status"></span>
+					<span class="information">От 8 до 15 символов с минимум одной цифрой, <br> одной  заглавной и одной строчной буквой. Только латиница</span>
 				</div>
 				<div class="wrapper-input gap">
 					<label for="user_re_password">Повторите</label>
-					<input id="user_re_password" type="password"  title="Повторите пароль" name="user_re_password" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,15}">
+					<input id="user_re_password" type="password"  title="Повторите пароль" name="user_re_password" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,15}" required>
 					<span class="status"></span>
+					<span class="information">Повторите введёный пароль</span>
 				</div>
 				<div class="captcha">
-					<label for="captcha">Введите число с картинки</label><br>
-					<img src="http://www.delo-bg63.ru/assets/tpl/img/captcha.jpg" alt="captcha">
-					<input id="captcha" type="text"  name="captcha" pattern="6345262">
+
+					<input name="md5" type="hidden">
+					<span id="aspm"></span>
+
+
+					<label for="txtInput">Введите число </label><br>
+					<span id="txtCaptchaDiv"  class="captcha-box"></span>
+					<input type="hidden" id="txtCaptcha" />
+					<input id="txtInput" type="text"  name="txtInput"  pattern="[0-9]{5}">
 					<span class="status"></span>
+					<span class="information">Вводите с права на лево</span>
 				</div>
 			</div>
 			<div class="box-btn">
@@ -59,6 +75,7 @@
 			</div>
 		</form>
 </div>
+<script src="js/capcha.js"></script>
 </body>
 
 </html>
